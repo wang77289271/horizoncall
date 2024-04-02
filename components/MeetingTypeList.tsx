@@ -125,6 +125,7 @@ const MeetingTypeList = () => {
               timeCaption='time'
               dateFormat='MMMM d, yyyy h:mm aa'
               className='w-full rounded bg-dark-3 p-2 focus:outline-none'
+              minDate={new Date()}
             />
           </div>
         </MeetingModal>
