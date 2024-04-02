@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Horizoncall',
   description: 'Video Calling App',
   icons: {
-    icon: '/icons/logo.svg',
+    icon: '/icons/logo.png',
   },
 }
 

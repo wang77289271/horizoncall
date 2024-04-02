@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Horizoncall',
   description: 'Video Calling App',
   icons: {
-    icon: '/icons/logo.svg',
+    icon: '/icons/logo.png',
   },
 }
 
@@ -27,7 +27,7 @@ export default function RootLayout({
         appearance={{
           layout: {
             socialButtonsVariant: 'iconButton',
-            logoImageUrl: '/icons/yoom-logo.svg',
+            logoImageUrl: '/icons/horizon-logo.png',
           },
           variables: {
             colorText: '#fff',
