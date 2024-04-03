@@ -7,7 +7,12 @@ import MeetingCard from './MeetingCard'
 import Loader from './Loader'
 import { useToast } from './ui/use-toast'
 
-const CallList = ({ type }: { type: 'upcoming' | 'ended' | 'recordings' }) => {
+interface CallListProps {
+  type: 'upcoming' | 'ended' | 'recordings'
+  isOnHomePage: boolean | null
+}
+
+const CallList = ({ type, isOnHomePage }: CallListProps) => {
   const { endedCalls, upcomingCalls, callRecordings, isLoading } = useGetCalls()
   const router = useRouter()
   const [recordings, setRecordings] = useState<CallRecording[]>([])
@@ -66,6 +71,7 @@ const CallList = ({ type }: { type: 'upcoming' | 'ended' | 'recordings' }) => {
     <div className='grid grid-cols-1 gap-5 xl:grid-cols-2'>
       {calls && calls.length > 0 ? (
         calls
+          .slice(0, isOnHomePage ? 2 : undefined)
           .sort(
             (
               mostRecentMeeting: Call | CallRecording,

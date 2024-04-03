@@ -12,7 +12,7 @@ const HomeUpcomingMeeting = () => {
         </Link>
       </div>
 
-      <CallList type='upcoming' />
+      <CallList type='upcoming' isOnHomePage={true} />
     </section>
   )
 }
