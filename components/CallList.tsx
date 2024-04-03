@@ -9,7 +9,7 @@ import { useToast } from './ui/use-toast'
 
 interface CallListProps {
   type: 'upcoming' | 'ended' | 'recordings'
-  isOnHomePage: boolean | null
+  isOnHomePage?: boolean | null
 }
 
 const CallList = ({ type, isOnHomePage }: CallListProps) => {
