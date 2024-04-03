@@ -71,13 +71,16 @@ const CallList = ({ type }: { type: 'upcoming' | 'ended' | 'recordings' }) => {
               mostRecentMeeting: Call | CallRecording,
               nextMeeting: Call | CallRecording
             ) => {
-              const dateA =
+              const mostRecentDate =
                 (mostRecentMeeting as Call)?.state?.startsAt ||
                 (mostRecentMeeting as CallRecording)?.start_time
-              const dateB =
+              const nextDate =
                 (nextMeeting as Call)?.state?.startsAt ||
                 (nextMeeting as CallRecording)?.start_time
-              return new Date(dateA).getTime() - new Date(dateB).getTime()
+              return (
+                new Date(mostRecentDate).getTime() -
+                new Date(nextDate).getTime()
+              )
             }
           )
           .map((meeting: Call | CallRecording) => (
