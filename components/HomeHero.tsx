@@ -1,7 +1,7 @@
 'use client'
 
 import { useGetCalls } from '@/hooks/useGetCalls'
-import { Call, CallRecording } from '@stream-io/video-react-sdk'
+import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
 import { useEffect, useState } from 'react'
 
 const HomeHero = () => {
@@ -52,7 +52,7 @@ const HomeHero = () => {
   return (
     <div className='h-[300px] w-full rounded-[20px] bg-hero bg-cover'>
       <div className='flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11'>
-        <h2 className='glassmorphism max-w-[403px] rounded py-2 text-center text-base font-normal'>
+        <h2 className='glassmorphism max-w-[403px] rounded py-2 text-center text-base font-normal mb-4'>
           {!!upcomingMeeting
             ? formatMeetingTime(upcomingMeeting)
             : 'No upcoming Meeting'}
