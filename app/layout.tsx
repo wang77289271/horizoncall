@@ -27,7 +27,7 @@ export default function RootLayout({
         appearance={{
           layout: {
             socialButtonsVariant: 'iconButton',
-            logoImageUrl: '/icons/horizon-logo.png',
+            logoImageUrl: '/icons/horizon-logo.svg',
           },
           variables: {
             colorText: '#fff',
